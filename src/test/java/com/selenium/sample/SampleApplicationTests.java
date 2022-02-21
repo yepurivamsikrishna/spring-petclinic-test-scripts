@@ -39,8 +39,8 @@ class SampleApplicationTests {
 		URL url=new URL("http://localhost:5566/wd/hub"); //hub url
 		*/
 		ChromeOptions chromeOptions = new ChromeOptions();
-		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-		options.addArguments("--no-sandbox"); // Bypass OS security model
+		chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+		chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model
                 chromeOptions.setCapability("browserVersion", "98.0.4758.102");
                 chromeOptions.setCapability("platformName", "Linux");
 
