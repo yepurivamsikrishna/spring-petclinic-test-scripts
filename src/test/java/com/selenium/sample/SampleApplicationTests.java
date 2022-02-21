@@ -37,7 +37,7 @@ class SampleApplicationTests {
 		options.setCapability("browserVersion", "98");
 		options.setCapability("platformName", "LINUX");
 		URL url=new URL("http://localhost:5566/wd/hub"); //hub url
-		WebDriver driver=new RemoteWebDriver(url, cap);
+		WebDriver driver=new RemoteWebDriver(url, options);
 		driver.manage().window().maximize();
 		String baseURL = "http://localhost:8081";
 		driver.get(baseURL); //Petclinic Url
