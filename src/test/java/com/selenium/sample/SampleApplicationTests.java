@@ -34,7 +34,7 @@ class SampleApplicationTests {
 		options.addArguments("--disable-gpu"); // applicable to windows os only
 		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 		options.addArguments("--no-sandbox"); // Bypass OS security model
-		options.setCapability("browserVersion", "98");
+		//options.setCapability("browserVersion", "98");
 		options.setCapability("platformName", "LINUX");
 		URL url=new URL("http://localhost:5566/wd/hub"); //hub url
 		WebDriver driver=new RemoteWebDriver(url, options);
