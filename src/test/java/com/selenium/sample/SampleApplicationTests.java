@@ -25,7 +25,7 @@ class SampleApplicationTests {
 	@Test
 	public void login() throws MalformedURLException, InterruptedException {
 
-		DesiredCapabilities cap=DesiredCapabilities.firefox();
+		DesiredCapabilities cap=DesiredCapabilities.chrome();
 		cap.setPlatform(Platform.LINUX);
 		URL url=new URL("http://localhost:5566/wd/hub"); //hub url
 		WebDriver driver=new RemoteWebDriver(url, cap);
