@@ -38,15 +38,17 @@ class SampleApplicationTests {
 		options.setCapability("platformName", "LINUX");
 		URL url=new URL("http://localhost:5566/wd/hub"); //hub url
 		*/
+		System.out.println("Start");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 		chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model
                 chromeOptions.setCapability("browserVersion", "98.0.4758.102");
                 chromeOptions.setCapability("platformName", "Linux");
 
-		
+		System.out.println("Start2");
 		URL url=new URL("http://localhost:4444"); //hub url
 		WebDriver driver=new RemoteWebDriver(url, chromeOptions);
+		System.out.println("Start3");
 		driver.manage().window().maximize();
 		String baseURL = "http://localhost:8081";
 		driver.get(baseURL); //Petclinic Url
