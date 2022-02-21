@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -25,8 +26,16 @@ class SampleApplicationTests {
 	@Test
 	public void login() throws MalformedURLException, InterruptedException {
 
-		DesiredCapabilities cap=DesiredCapabilities.chrome();
-		cap.setPlatform(Platform.LINUX);
+		//DesiredCapabilities cap=DesiredCapabilities.chrome();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("start-maximized"); // open Browser in maximized mode
+		options.addArguments("disable-infobars"); // disabling infobars
+		options.addArguments("--disable-extensions"); // disabling extensions
+		options.addArguments("--disable-gpu"); // applicable to windows os only
+		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+		options.addArguments("--no-sandbox"); // Bypass OS security model
+		options.setCapability("browserVersion", "98");
+		options.setCapability("platformName", "LINUX");
 		URL url=new URL("http://localhost:5566/wd/hub"); //hub url
 		WebDriver driver=new RemoteWebDriver(url, cap);
 		driver.manage().window().maximize();
