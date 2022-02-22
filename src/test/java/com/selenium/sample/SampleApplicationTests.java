@@ -26,19 +26,7 @@ class SampleApplicationTests {
 	@Test
 	public void login() throws MalformedURLException, InterruptedException {
 
-		/*DesiredCapabilities cap=DesiredCapabilities.chrome();
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("start-maximized"); // open Browser in maximized mode
-		options.addArguments("disable-infobars"); // disabling infobars
-		options.addArguments("--disable-extensions"); // disabling extensions
-		options.addArguments("--disable-gpu"); // applicable to windows os only
-		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-		options.addArguments("--no-sandbox"); // Bypass OS security model
-		options.setCapability("browserVersion", "98.0.4758.102");
-		options.setCapability("platformName", "LINUX");
-		URL url=new URL("http://localhost:5566/wd/hub"); //hub url
-		*/
-		
+				
 		
 		ChromeOptions chromeOptions = new ChromeOptions();
 		URL url=new URL("http://localhost:4444"); //hub url
